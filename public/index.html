@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Projeto 'Fundo do Mar' — Animais marinhos em extinção. Informações, curiosidades, fatos científicos e galeria para conscientização sobre a preservação dos oceanos." />
+  <title>Animais marinhos em extinção — Fundo do Mar</title>
+<script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+ <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <header>
+    <div class="container" role="banner">
+      <nav aria-label="Navegação principal">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">FR</div>
+          <div>
+            <strong>Fundo do Mar</strong><br/>
+            <small class="small">Equipe: Abelhas rainhas — Heloiza Kyara & Esther</small>
+          </div>
+        </div>
+
+        <div class="nav-links" role="navigation" aria-label="Links de seção">
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="#fatos">Fatos</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <article class="hero-card" aria-live="polite">
+        <h1 id="hero-title">Animais marinhos em extinção</h1>
+        <p class="lead">O fundo do mar é um mundo misterioso e cheio de vida, onde habitam espécies incríveis e ainda pouco conhecidas.</p>
+        <p>
+          O projeto apresenta espécies marinhas em extinção, mostrando seus principais riscos e causas, como a poluição, a pesca excessiva e a destruição dos habitats. O objetivo é conscientizar e incentivar a preservação da vida nos oceanos.
+        </p>
+
+        <div class="hero-buttons" role="group" aria-label="Ações principais">
+          <button id="abrirIA" class="cta" aria-label="Iniciar reconhecimento facial">Reconhecimento Facial</button>
+          <button id="btnAbrirChatbot" class="ghost" aria-label="Abrir chatbot">Abrir Chatbot</button>
+          <!-- TODO: substituir por link funcional ou integração real -->
+        </div>
+
+        <hr style="margin:1rem 0;border:none;border-top:1px solid rgba(0,0,0,0.04)">
+
+        <section aria-label="Informações do projeto">
+          <h2 style="margin:.2rem 0 0.6rem 0">Equipe & Identificação</h2>
+          <p class="small">Nome dos Integrantes: Heloiza Kyara de Santana Miguel; Esther Ramos Miguel. Nome da Equipe: <strong>Abelhas rainhas</strong>.</p>
+        </section>
+      </article>
+
+      <aside class="hero-visual" aria-label="Imagem principal do projeto">
+        <!-- TODO: Alunos podem trocar URL por arquivo local ./assets/hero.jpg -->
+        <img src="https://blogdopescador.com/wp-content/uploads/2022/08/caracteristicas-tubarao-martelo-pana.jpg" alt="Tubarão-martelo nadando - representação do fundo do mar" />
+      </aside>
+    </section>
+
+    <!-- Curiosidades -->
+    <section id="curiosidades" class="card" aria-labelledby="cur-title" style="margin-top:1.2rem;">
+      <h2 id="cur-title">Curiosidades</h2>
+      <p class="small">Fatos rápidos e interessantes sobre o oceano.</p>
+
+      <div class="curiosidades" role="list" aria-label="Lista de curiosidades">
+        <div class="cur-item" role="listitem">
+          <div class="icon-circle" aria-hidden="true">1</div>
+          <div>
+            <strong>Oceano maior que a terra</strong>
+            <div class="small">O oceano cobre mais de 70% da superfície da Terra.</div>
+          </div>
+        </div>
+
+        <div class="cur-item" role="listitem">
+          <div class="icon-circle" aria-hidden="true">2</div>
+          <div>
+            <strong>Grande desconhecido</strong>
+            <div class="small">A maior parte do fundo do mar ainda não foi explorada.</div>
+          </div>
+        </div>
+
+        <div class="cur-item" role="listitem">
+          <div class="icon-circle" aria-hidden="true">3</div>
+          <div>
+            <strong>Montanhas submersas</strong>
+            <div class="small">Existem montanhas e vulcões submersos maiores do que muitos na superfície.</div>
+          </div>
+        </div>
+
+        <div class="cur-item" role="listitem">
+          <div class="icon-circle" aria-hidden="true">4</div>
+          <div>
+            <strong>Fossa das Marianas</strong>
+            <div class="small">O ponto mais profundo tem quase 11 mil metros.</div>
+          </div>
+        </div>
+
+        <div class="cur-item" role="listitem">
+          <div class="icon-circle" aria-hidden="true">5</div>
+          <div>
+            <strong>Oxigênio do oceano</strong>
+            <div class="small">O mar produz mais da metade do oxigênio do planeta.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fatos / Ciência -->
+    <section id="fatos" class="card" aria-labelledby="fatos-title" style="margin-top:1.2rem;">
+      <h2 id="fatos-title">Fatos e Ciência</h2>
+      <p class="small">Informações científicas para aprofundar o tema.</p>
+
+      <div class="facts" role="list">
+        <div class="fact-row" role="listitem">
+          <article class="fact-card" aria-labelledby="f1">
+            <h3 id="f1">Oceano: o pulmão do planeta</h3>
+            <p>O fitoplâncton marinho produz cerca de 50% a 80% do oxigênio que respiramos.</p>
+          </article>
+
+          <article class="fact-card" aria-labelledby="f2">
+            <h3 id="f2">Profundezas inexploradas</h3>
+            <p>Mais de 80% do oceano permanece sem exploração direta por humanos.</p>
+          </article>
+
+          <article class="fact-card" aria-labelledby="f3">
+            <h3 id="f3">Pressão extrema</h3>
+            <p>A pressão na Fossa das Marianas é mais de mil vezes maior do que na superfície.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="card" aria-labelledby="gal-title" style="margin-top:1.2rem;">
+      <h2 id="gal-title">Galeria</h2>
+      <p class="small">Imagens representativas. Legendas curtas abaixo de cada imagem.</p>
+
+      <div class="gallery" role="list" aria-label="Galeria de imagens">
+        <figure role="listitem">
+          <img src="https://blogdopescador.com/wp-content/uploads/2022/08/caracteristicas-tubarao-martelo-pana.jpg" alt="Tubarão-martelo nadando" />
+          <figcaption class="caption">Tubarão-martelo em águas abertas</figcaption>
+        </figure>
+
+        <figure role="listitem">
+          <img src="https://meusanimais.com.br/wp-content/uploads/2019/06/Cavalo-marinho-tudo-que-voce-precisa-saber-768x428.jpg" alt="Cavalo-marinho" />
+          <figcaption class="caption">Cavalo-marinho entre algas</figcaption>
+        </figure>
+
+        <figure role="listitem">
+          <img src="https://marsemfim.com.br/wp-content/uploads/2013/08/Leviathan-ou-baleia-azul-copiar.jpg" alt="Baleia-azul" />
+          <figcaption class="caption">Baleia-azul — o maior animal do planeta</figcaption>
+        </figure>
+
+        <figure role="listitem">
+          <img src="https://static.vecteezy.com/ti/fotos-gratis/p1/55621797-laranja-cavalo-marinho-natacao-dentro-azul-oceano-agua-foto.jpg" alt="Cavalo-marinho colorido" />
+          <figcaption class="caption">Cores e formas únicas</figcaption>
+        </figure>
+
+        <figure role="listitem">
+          <img src="https://123ecos.com.br/wp-content/uploads/2025/03/Baleia-azul-Balaenoptera-musculus-1024x683.jpg" alt="Baleia-azul saltando parcialmente" />
+          <figcaption class="caption">Baleia-azul em mar aberto</figcaption>
+        </figure>
+
+        <figure role="listitem">
+          <img src="https://midias.agazeta.com.br/2021/03/09/1920x1080/a-tartaruga-de-couro-dermochelys-coriacea-tambem-e-conhecida-como-tartaruga-gigante-434515.jpg" alt="Tartaruga-de-couro na praia" />
+          <figcaption class="caption">Tartaruga-de-couro — espécie ameaçada</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="card" aria-labelledby="faq-title" style="margin-top:1.2rem;">
+      <h2 id="faq-title">Perguntas Frequentes (FAQ)</h2>
+      <p class="small">Dúvidas rápidas sobre o fundo do mar e conservação.</p>
+
+      <div style="margin-top:.8rem;">
+        <details>
+          <summary><strong>O que é o fundo do mar?</strong></summary>
+          <p>É a parte mais profunda dos oceanos, onde quase não chega luz solar.</p>
+        </details>
+
+        <details>
+          <summary><strong>Por que o mar é salgado?</strong></summary>
+          <p>Porque os rios transportam sais minerais das rochas até o oceano ao longo do tempo.</p>
+        </details>
+
+        <details>
+          <summary><strong>Por que as tartarugas estão em extinção?</strong></summary>
+          <p>Principalmente por poluição, captura acidental na pesca e perda de praias de nidificação.</p>
+        </details>
+
+        <details>
+          <summary><strong>Como podemos ajudar os oceanos?</strong></summary>
+          <p>Reduzindo o uso de plástico, economizando água, apoiando áreas protegidas e educando outras pessoas.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="card cta-final" aria-label="Call to action" style="margin-top:1.2rem;">
+      <div>
+        <h3 style="margin:.1rem 0;">Quer aprender mais?</h3>
+        <p class="small">Explore material didático, atividades e links de apoio sobre conservação marinha.</p>
+      </div>
+      <div style="display:flex;gap:.6rem;align-items:center;">
+        <a href="#galeria" class="ghost" style="text-decoration:none;padding:.6rem .9rem;border-radius:10px;">Aprender mais</a>
+        <a href="#top" class="cta" style="text-decoration:none;padding:.6rem .9rem;border-radius:10px;">Voltar ao topo</a>
+      </div>
+    </section>
+
+    <!-- Créditos / Fontes -->
+    <section class="card" aria-labelledby="fontes" style="margin-top:1.2rem;">
+      <h2 id="fontes">Créditos e Fontes</h2>
+      <p class="small">
+        Imagens e referências fornecidas pelo grupo: blogdopescador.com, meusanimais.com.br, marsemfim.com.br, images.unsplash.com, midias.agazeta.com.br, 123ecos.com.br. <!-- TODO: substituir por links completos se necessário -->
+      </p>
+      <p class="small">Autores do projeto: Heloiza Kyara de Santana Miguel; Esther Ramos Miguel — Equipe: Abelhas rainhas.</p>
+    </section>
+  </main>
+
+  <!-- Chatbot Aside (inicialmente oculto) -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Chatbot-IA"
+      agent-id="7e9ea28d-fc2a-4f18-a435-1d31267d9a34"
+      language-code="pt-br">
+    </df-messenger>
+
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p class="small">© <span id="year"></span> Fundo do Mar — Projeto educacional • <a href="#top">Voltar ao topo</a></p>
+    </div>
+  </footer>
+
+<script src="script.js" defer></script>
+
+<!-- MODAL DE RECONHECIMENTO FACIAL -->
+<div id="cameraModal" class="camera-modal" aria-hidden="true">
+  <div class="camera-modal-content">
+  
+    <button id="fecharModal" class="camera-close" title="Fechar">❌</button>
+    <h2 class="camera-title">Reconhecimento Facial</h2>
+    <div class="camera-video-box">
+      <video id="video" autoplay muted playsinline></video>
+    </div>
+    <div class="camera-controls">
+      <button id="tirarFoto" class="camera-btn">📸 Tirar Foto</button>
+    </div>
+    <p id="modalStatus" class="camera-status">Aguardando...</p>
+    <canvas id="fotoCanvas" style="display:none;"></canvas>
+  </div>
+</div>
+
+</body>
+</html>
